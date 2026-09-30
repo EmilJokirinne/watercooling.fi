@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="fi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vesijäähdytys aloittelijalle – perusteet selkokielellä | Watercooling.fi</title>
+<meta name="description" content="Vesijäähdytys aloittelijalle: miten vesijäähdytys toimii, AiO vai custom loop, mitä aloittaminen maksaa ja mitkä ovat yleisimmät virheet.">
+<link rel="canonical" href="https://watercooling.fi/oppaat/vesijaahdytys-aloittelijalle">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#06080b">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fi_FI">
+<meta property="og:site_name" content="Watercooling.fi">
+<meta property="og:title" content="Vesijäähdytys aloittelijalle – perusteet selkokielellä | Watercooling.fi">
+<meta property="og:description" content="Vesijäähdytys aloittelijalle: miten vesijäähdytys toimii, AiO vai custom loop, mitä aloittaminen maksaa ja mitkä ovat yleisimmät virheet.">
+<meta property="og:url" content="https://watercooling.fi/oppaat/vesijaahdytys-aloittelijalle">
+<meta property="og:image" content="https://watercooling.fi/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://watercooling.fi/#org",
+   "name": "Watercooling.fi",
+   "url": "https://watercooling.fi/",
+   "logo": "https://watercooling.fi/favicon.svg"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://watercooling.fi/#website",
+   "name": "Watercooling.fi",
+   "url": "https://watercooling.fi/",
+   "inLanguage": "fi-FI",
+   "publisher": {
+    "@id": "https://watercooling.fi/#org"
+   },
+   "description": "Suomalainen vesijäähdytyksen tietopankki"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Etusivu",
+     "item": "https://watercooling.fi/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Oppaat",
+     "item": "https://watercooling.fi/oppaat"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "Vesijäähdytys aloittelijalle",
+     "item": "https://watercooling.fi/oppaat/vesijaahdytys-aloittelijalle"
+    }
+   ]
+  },
+  {
+   "@type": "Article",
+   "headline": "Vesijäähdytys aloittelijalle",
+   "description": "Vesijäähdytyksen perusteet aloittelijalle: toimintaperiaate, AiO vs custom loop, hinnat ja yleisimmät virheet.",
+   "inLanguage": "fi-FI",
+   "datePublished": "2026-09-30",
+   "dateModified": "2026-09-30",
+   "author": {
+    "@id": "https://watercooling.fi/#org"
+   },
+   "publisher": {
+    "@id": "https://watercooling.fi/#org"
+   },
+   "mainEntityOfPage": "https://watercooling.fi/oppaat/vesijaahdytys-aloittelijalle",
+   "image": "https://watercooling.fi/og-image.png"
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Onko vesijäähdytys parempi kuin ilmajäähdytys?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ei automaattisesti. Hyvä ilmajäähdytin riittää monelle prosessorille ja on yksinkertainen sekä pitkäikäinen. Vesijäähdytyksestä on yleensä eniten hyötyä, kun lämpökuorma on suuri, kotelossa halutaan tilaa prosessorin ympärille tai kun halutaan jäähdyttää myös näytönohjain. Lopputulos riippuu aina kokoonpanosta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Onko vesijäähdytys turvallista?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oikein asennettuna vesijäähdytys on yleisesti turvallinen. AiO on tehtaalla suljettu ja testattu. Custom loopissa riskit liittyvät lähinnä asennusvirheisiin, joten vuototesti ennen käynnistystä on välttämätön."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kannattaako aloittelijan rakentaa custom loop?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Se on mahdollista, jos suunnittelee huolella ja varaa aikaa. Moni aloittaa AiO:lla ja siirtyy custom looppiin myöhemmin. Jos rakennat ensimmäisen loopin, aloita joustavilla letkuilla, lue asennusohjeet ja tee perusteellinen vuototesti."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#sisalto">Siirry sisältöön</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Watercooling.fi – etusivu"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22c7e8"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="11" fill="#0f141b" stroke="rgba(148,178,210,.25)"/><path d="M20 8s8 8.6 8 14.2A8 8 0 0 1 12 22.2C12 16.6 20 8 20 8z" fill="url(#lg)"/><path d="M16.5 23.5a3.6 3.6 0 0 0 3.5 3.3" stroke="#e8f9ff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/></svg><span class="logo-text"><span class="logo-name">WATERCOOLING.FI</span><span class="logo-tag">Suomalainen vesijäähdytyksen tietopankki</span></span></a>
+    <nav id="main-nav" class="main-nav" aria-label="Päävalikko">
+      <ul><li><a href="/">Etusivu</a></li><li><a href="/vesijaahdytys">Vesijäähdytys</a></li><li><a href="/aio">AiO</a></li><li><a href="/custom-loop">Custom Loop</a></li><li><a href="/komponentit">Komponentit</a></li><li><a href="/hinnat">Hinnat</a></li><li><a href="/tuotemerkit">Tuotemerkit</a></li><li><a href="/oppaat" aria-current="page">Oppaat</a></li><li><a href="/ukk">UKK</a></li></ul>
+      <a class="btn btn-primary nav-cta" href="/hinnat#laskuri">Aloita vesijäähdytyksen suunnittelu →</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="/hinnat#laskuri">Aloita suunnittelu →</a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Avaa valikko">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+<main id="sisalto">
+<section class="page-hero"><div class="container"><nav class="breadcrumbs" aria-label="Murupolku"><ol><li><a href="/">Etusivu</a></li><li><a href="/oppaat">Oppaat</a></li><li aria-current="page">Vesijäähdytys aloittelijalle</li></ol></nav><span class="eyebrow">Perusteet</span><h1>Vesijäähdytys aloittelijalle</h1>
+<p class="lead">Mitä vesijäähdytys on, miten se toimii ja kumpi sopii sinulle paremmin: valmis AiO vai itse rakennettu custom loop? Tämä opas käy perusteet läpi selkeästi.</p>
+<p class="updated">Päivitetty <time datetime="2026-09-30">30.9.2026</time> · Lukuaika noin 6 min</p></div></section>
+<div class="container"><div class="article-layout">
+<nav class="toc" aria-label="Sisällysluettelo"><h2>Sisällys</h2><ol><li><a href="#toimintaperiaate">Miten vesijäähdytys toimii?</a></li><li><a href="#aio-vai-custom">AiO vai custom loop?</a></li><li><a href="#tarvitsetko">Tarvitsetko vesijäähdytyksen?</a></li><li><a href="#hinta">Mitä aloittaminen maksaa?</a></li><li><a href="#virheet">Aloittelijan yleisimmät virheet</a></li><li><a href="#ukk">Usein kysyttyä</a></li></ol></nav>
+<article class="prose"><h2 id="toimintaperiaate">Miten vesijäähdytys toimii?</h2>
+<p>Vesijäähdytyksessä lämpö kulkee kolmen vaiheen kautta. Ensin <b>vesiblokki</b> johtaa lämmön prosessorista tai näytönohjaimesta nesteeseen. Sitten <b>pumppu</b> kierrättää lämmenneen nesteen <b>radiatoriin</b>. Lopuksi tuulettimet puhaltavat ilmaa radiatorin lamellien läpi, ja lämpö siirtyy ilmaan.</p>
+<p>Neste siis ei itsessään "jäähdytä" mitään – se toimii tehokkaana kuljettimena, joka siirtää lämmön paikkaan, josta sen voi poistaa suurelta pinta-alalta.</p>
+<div class="infobox" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><p>Vesi johtaa lämpöä huomattavasti paremmin kuin ilma, ja sillä on suuri lämpökapasiteetti. Siksi nestekierto voi tasoittaa lyhyitä lämpöpiikkejä.</p></div></div>
+<h3>Järjestelmän osat lyhyesti</h3>
+<ul><li><b>Vesiblokki</b> – kosketuksessa komponenttiin</li><li><b>Pumppu</b> – pitää nesteen liikkeessä</li><li><b>Radiatori ja tuulettimet</b> – poistavat lämmön</li><li><b>Letkut ja liittimet</b> – yhdistävät osat</li><li><b>Jäähdytysneste</b> – kuljettaa lämmön</li></ul>
+<h2 id="aio-vai-custom">AiO vai custom loop?</h2>
+<p>Aloittelijalle AiO on lähes aina helpoin tapa kokeilla vesijäähdytystä. Se on tehtaalla koottu, täytetty ja suljettu, joten sinun tarvitsee vain kiinnittää blokki prosessoriin ja radiatori koteloon.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">Ominaisuus</th><th scope="col">AiO</th><th scope="col">Custom loop</th></tr></thead><tbody>
+<tr><td>Asennus</td><td>Helppo</td><td>Vaativa</td></tr>
+<tr><td>Huolto</td><td>Vähäinen</td><td>Säännöllinen</td></tr>
+<tr><td>Jäähdytettävät osat</td><td>Yleensä CPU</td><td>CPU ja GPU</td></tr>
+<tr><td>Muokattavuus</td><td>Rajallinen</td><td>Laaja</td></tr>
+<tr><td>Hinta (suuntaa-antava)</td><td>noin 50–300 €</td><td>noin 250–1 000+ €</td></tr>
+</tbody></table></div>
+<h2 id="tarvitsetko">Tarvitsetko vesijäähdytyksen?</h2>
+<p>Et välttämättä. Moni tietokone toimii erinomaisesti hyvällä ilmajäähdyttimellä. Vesijäähdytystä kannattaa harkita, jos</p>
+<ul><li>prosessorisi kuluttaa kuormassa paljon tehoa</li><li>kotelossa ei ole tilaa korkealle tornijäähdyttimelle</li><li>haluat jäähdyttää myös näytönohjaimen nesteellä</li><li>arvostat tiettyä ulkonäköä</li></ul>
+<p>Lopputulos riippuu aina kokoonpanosta: kotelosta, tuulettimista ja komponenttien kulutuksesta.</p>
+<h2 id="hinta">Mitä aloittaminen maksaa?</h2>
+<p>Keskitason 240 mm:n AiO maksaa suuntaa-antavasti noin 55–110 € ja tehokkaampi 360 mm:n malli noin 100–170 €. Custom loopin kokonaishinta alkaa tyypillisesti muutamasta sadasta eurosta.</p>
+<div class="infobox" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><p>Hintatiedot ovat suuntaa-antavia ja voivat muuttua jälleenmyyjien, tarjousten ja saatavuuden mukaan.</p></div></div>
+<p><a href="/hinnat#laskuri">Laske oma budjettisi hintalaskurilla →</a></p>
+<h2 id="virheet">Aloittelijan yleisimmät virheet</h2>
+<ol><li><b>Suojakalvo jää blokin pohjaan.</b> Tarkista aina ennen asennusta.</li><li><b>Pumppu kytketään väärään liitäntään</b> tai sen nopeus rajoitetaan liian matalaksi.</li><li><b>Radiatori ei mahdu koteloon</b>, koska tuulettimien paksuus unohtui.</li><li><b>Pumppu on järjestelmän korkeimmassa kohdassa</b>, jolloin ilma kertyy pumppuun ja aiheuttaa ääntä.</li><li><b>Custom loop käynnistetään ilman vuototestiä.</b></li></ol>
+<div class="infobox infobox--warn" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg><div><p>Custom loop vaatii huolellista asennusta. Älä käynnistä tietokonetta ennen kuin olet varmistanut, että järjestelmä on tiivis.</p></div></div>
+<h2 id="ukk">Usein kysyttyä</h2>
+<div class="faq"><details><summary>Onko vesijäähdytys parempi kuin ilmajäähdytys?</summary><div class="answer"><p>Ei automaattisesti. Hyvä ilmajäähdytin riittää monelle prosessorille ja on yksinkertainen sekä pitkäikäinen. Vesijäähdytyksestä on yleensä eniten hyötyä, kun lämpökuorma on suuri, kotelossa halutaan tilaa prosessorin ympärille tai kun halutaan jäähdyttää myös näytönohjain. Lopputulos riippuu aina kokoonpanosta.</p></div></details><details><summary>Onko vesijäähdytys turvallista?</summary><div class="answer"><p>Oikein asennettuna vesijäähdytys on yleisesti turvallinen. AiO on tehtaalla suljettu ja testattu. Custom loopissa riskit liittyvät lähinnä asennusvirheisiin, joten vuototesti ennen käynnistystä on välttämätön.</p></div></details><details><summary>Kannattaako aloittelijan rakentaa custom loop?</summary><div class="answer"><p>Se on mahdollista, jos suunnittelee huolella ja varaa aikaa. Moni aloittaa AiO:lla ja siirtyy custom looppiin myöhemmin. Jos rakennat ensimmäisen loopin, aloita joustavilla letkuilla, lue asennusohjeet ja tee perusteellinen vuototesti.</p></div></details></div></article>
+</div></div><section class="section"><div class="container"><div class="cta-band reveal">
+  <h2>Suunnittele oma vesijäähdytyksesi</h2><p>Laske suuntaa-antava budjetti AiO- tai custom loop -kokoonpanolle ja tutustu komponentteihin ennen ostopäätöstä.</p>
+  <div class="btn-row"><a class="btn btn-primary" href="/hinnat#laskuri">Avaa hintalaskuri</a><a class="btn btn-ghost" href="/oppaat/vesijaahdytys-aloittelijalle">Lue aloittelijan opas</a></div>
+</div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="/"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22c7e8"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="11" fill="#0f141b" stroke="rgba(148,178,210,.25)"/><path d="M20 8s8 8.6 8 14.2A8 8 0 0 1 12 22.2C12 16.6 20 8 20 8z" fill="url(#lg)"/><path d="M16.5 23.5a3.6 3.6 0 0 0 3.5 3.3" stroke="#e8f9ff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/></svg><span class="logo-text"><span class="logo-name">WATERCOOLING.FI</span></span></a>
+        <p class="muted mt-2">Suomalainen vesijäähdytyksen tietopankki.</p>
+        <p class="small muted">Riippumaton tietosivusto – ei verkkokauppa. Hintatiedot ovat suuntaa-antavia ja voivat muuttua jälleenmyyjien, tarjousten ja saatavuuden mukaan.</p>
+      </div>
+      <nav aria-label="Sivuston osiot"><h2>Sisältö</h2><ul><li><a href="/vesijaahdytys">Vesijäähdytys</a></li><li><a href="/aio">AiO</a></li><li><a href="/custom-loop">Custom Loop</a></li><li><a href="/komponentit">Komponentit</a></li><li><a href="/hinnat">Hinnat</a></li><li><a href="/tuotemerkit">Tuotemerkit</a></li><li><a href="/oppaat">Oppaat</a></li><li><a href="/ukk">UKK</a></li></ul></nav>
+      <nav aria-label="Tietoa sivustosta"><h2>Sivusto</h2><ul>
+        <li><a href="/tietosuoja">Tietosuojakäytäntö</a></li>
+        <li><a href="/evasteet">Evästekäytäntö</a></li>
+        <li><a href="/yhteystiedot">Yhteystiedot</a></li>
+      </ul></nav>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Watercooling.fi</span><span>Sisältö päivitetty 30.9.2026</span></div>
+  </div>
+</footer>
+<script src="/main.js" defer></script>
+</body>
+</html>

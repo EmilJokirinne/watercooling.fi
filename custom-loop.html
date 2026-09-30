@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fi" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Custom loop – avoin vesijäähdytys vaihe vaiheelta | Watercooling.fi</title>
+<meta name="description" content="Custom loop -opas: suunnittelu, kotelon yhteensopivuus, radiatorit, blokit, pumppu, täyttö ja vuototesti. Suuntaa-antavat hinnat ja huolto-ohjeet.">
+<link rel="canonical" href="https://watercooling.fi/custom-loop">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#06080b">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fi_FI">
+<meta property="og:site_name" content="Watercooling.fi">
+<meta property="og:title" content="Custom loop – avoin vesijäähdytys vaihe vaiheelta | Watercooling.fi">
+<meta property="og:description" content="Custom loop -opas: suunnittelu, kotelon yhteensopivuus, radiatorit, blokit, pumppu, täyttö ja vuototesti. Suuntaa-antavat hinnat ja huolto-ohjeet.">
+<meta property="og:url" content="https://watercooling.fi/custom-loop">
+<meta property="og:image" content="https://watercooling.fi/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://watercooling.fi/#org",
+   "name": "Watercooling.fi",
+   "url": "https://watercooling.fi/",
+   "logo": "https://watercooling.fi/favicon.svg"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://watercooling.fi/#website",
+   "name": "Watercooling.fi",
+   "url": "https://watercooling.fi/",
+   "inLanguage": "fi-FI",
+   "publisher": {
+    "@id": "https://watercooling.fi/#org"
+   },
+   "description": "Suomalainen vesijäähdytyksen tietopankki"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Etusivu",
+     "item": "https://watercooling.fi/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Custom Loop",
+     "item": "https://watercooling.fi/custom-loop"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Mitä custom loop tarkoittaa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Custom loop eli avoin vesijäähdytys rakennetaan erillisistä osista: vesiblokeista, pumpusta, säiliöstä, radiatoreista, letkuista ja liittimistä. Se on muokattava ja voi jäähdyttää sekä CPU:n että GPU:n, mutta vaatii suunnittelua ja huoltoa."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Voiko CPU:n ja GPU:n jäähdyttää samalla loopilla?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Voi, ja se on custom loopin tyypillisin käyttötarkoitus. Tällöin radiatoripinta-alaa kannattaa mitoittaa molempien komponenttien yhteenlasketun lämpökuorman mukaan."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mitä custom loop maksaa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pelkän prosessorin custom loop maksaa suuntaa-antavasti noin 250–600 €, ja CPU+GPU-loop tyypillisesti noin 400–1 000 € tai enemmän. Hinta riippuu radiatoreista, liittimien määrästä ja siitä, käytetäänkö kovaputkea."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mitä jäähdytysnestettä pitäisi käyttää?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Custom loopissa käytetään yleensä vesijäähdytykseen tarkoitettua valmisnestettä tai tislattua vettä korroosion- ja kasvustonestoaineiden kanssa. Hanavettä ei suositella. AiO:ssa neste on valmiina, eikä sitä vaihdeta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kannattaako aloittelijan rakentaa custom loop?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Se on mahdollista, jos suunnittelee huolella ja varaa aikaa. Moni aloittaa AiO:lla ja siirtyy custom looppiin myöhemmin. Jos rakennat ensimmäisen loopin, aloita joustavilla letkuilla, lue asennusohjeet ja tee perusteellinen vuototesti."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#sisalto">Siirry sisältöön</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="/" aria-label="Watercooling.fi – etusivu"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22c7e8"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="11" fill="#0f141b" stroke="rgba(148,178,210,.25)"/><path d="M20 8s8 8.6 8 14.2A8 8 0 0 1 12 22.2C12 16.6 20 8 20 8z" fill="url(#lg)"/><path d="M16.5 23.5a3.6 3.6 0 0 0 3.5 3.3" stroke="#e8f9ff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/></svg><span class="logo-text"><span class="logo-name">WATERCOOLING.FI</span><span class="logo-tag">Suomalainen vesijäähdytyksen tietopankki</span></span></a>
+    <nav id="main-nav" class="main-nav" aria-label="Päävalikko">
+      <ul><li><a href="/">Etusivu</a></li><li><a href="/vesijaahdytys">Vesijäähdytys</a></li><li><a href="/aio">AiO</a></li><li><a href="/custom-loop" aria-current="page">Custom Loop</a></li><li><a href="/komponentit">Komponentit</a></li><li><a href="/hinnat">Hinnat</a></li><li><a href="/tuotemerkit">Tuotemerkit</a></li><li><a href="/oppaat">Oppaat</a></li><li><a href="/ukk">UKK</a></li></ul>
+      <a class="btn btn-primary nav-cta" href="/hinnat#laskuri">Aloita vesijäähdytyksen suunnittelu →</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-cta" href="/hinnat#laskuri">Aloita suunnittelu →</a>
+    <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Avaa valikko">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+<main id="sisalto">
+<section class="page-hero"><div class="container">
+  <nav class="breadcrumbs" aria-label="Murupolku"><ol><li><a href="/">Etusivu</a></li><li aria-current="page">Custom Loop</li></ol></nav>
+  <span class="eyebrow">Avoin vesijäähdytys</span>
+  <h1>Custom loop – avoin vesijäähdytys</h1>
+  <p class="lead">Custom loop kootaan erillisistä osista ja voi jäähdyttää sekä prosessorin että näytönohjaimen. Tämä opas käy läpi suunnittelun, osat ja rakentamisen vaihe vaiheelta.</p>
+  <p class="updated">Päivitetty 30.9.2026</p>
+</div></section><section class="section"><div class="container narrow"><div class="infobox infobox--warn" role="note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 20h20L12 3z"/><path d="M12 10v4M12 17h.01"/></svg><div><p><strong>Custom loop vaatii huolellista asennusta. Älä käynnistä tietokonetta ennen kuin olet varmistanut, että järjestelmä on tiivis.</strong></p></div></div></div></section><section class="section" id="opas"><div class="container"><div class="section-head reveal"><span class="eyebrow">Opas</span><h2>Custom loop vaihe vaiheelta</h2><p class="lead">12 vaihetta ensimmäisestä suunnitelmasta valmiiseen, tiiviiseen looppiin.</p></div><ol class="steps two-col"><li class="reveal"><h3>Suunnittele loop</h3><p>Päätä mitä jäähdytät (CPU, GPU vai molemmat), budjetti ja tyyli: joustava letku vai kovaputki.</p></li><li class="reveal"><h3>Tarkista kotelon yhteensopivuus</h3><p>Selvitä radiatoripaikat, paksuusrajat sekä pumppu-säiliöyhdistelmän kiinnitysvaihtoehdot.</p></li><li class="reveal"><h3>Valitse radiatori</h3><p>Mitoita radiatoripinta-ala lämpökuorman mukaan. CPU+GPU-loopissa käytetään usein kahta radiatoria.</p></li><li class="reveal"><h3>Valitse CPU/GPU-blokit</h3><p>Tarkista CPU-blokin socket-tuki ja GPU-blokin yhteensopivuus juuri sinun näytönohjaimesi piirilevyn kanssa.</p></li><li class="reveal"><h3>Valitse pumppu ja säiliö</h3><p>Pumppu-säiliöyhdistelmä helpottaa asennusta. Sijoita säiliö niin, että pumppu saa nesteen painovoimaisesti.</p></li><li class="reveal"><h3>Valitse letkut ja liittimet</h3><p>Varmista, että letkun sisä- ja ulkohalkaisija vastaavat liittimiä. Varaa muutama ylimääräinen liitin.</p></li><li class="reveal"><h3>Suunnittele loopin reitti</h3><p>Järjestyksellä ei ole suurta merkitystä lämpötiloihin, kunhan säiliö on ennen pumppua. Suosi selkeitä ja lyhyitä reittejä.</p></li><li class="reveal"><h3>Asenna komponentit</h3><p>Asenna blokit, radiatorit ja pumppu. Kiristä liittimet käsin – älä käytä työkaluja ylikiristykseen.</p></li><li class="reveal"><h3>Täytä järjestelmä</h3><p>Täytä säiliön kautta ja käytä pumppua lyhyissä jaksoissa. Älä anna pumpun käydä kuivana.</p></li><li class="reveal"><h3>Tee vuototesti</h3><p>Aja pumppua erillisellä virtalähteen hyppylangalla tai testerillä vähintään useita tunteja ilman, että muut komponentit saavat virtaa. Tarkista liitokset paperilla.</p></li><li class="reveal"><h3>Käynnistä järjestelmä</h3><p>Kun loop on tiivis ja ilmat poistettu, kytke virrat koko koneeseen ja tarkista pumpun sekä tuulettimien toiminta.</p></li><li class="reveal"><h3>Seuraa lämpötiloja</h3><p>Seuraa CPU-, GPU- ja nesteen lämpötiloja. Ilmaa poistuu vielä ensimmäisten päivien aikana – täydennä nestettä tarvittaessa.</p></li></ol></div></section><section class="section section--alt" id="komponentit"><div class="container"><div class="section-head reveal"><span class="eyebrow">Komponentit</span><h2>Vesijäähdytyksen komponentit</h2><p class="lead">Jokaisella osalla on oma tehtävänsä. Kun tiedät mitä kukin osa tekee, on helpompi mitoittaa järjestelmä ja välttää yhteensopivuusongelmat.</p></div><div class="grid grid-3"><article class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></div><h3>CPU-vesiblokki</h3><p class="muted">Siirtää prosessorin lämmön nesteeseen.</p><p class="price-chip">50–150 € <small>tyypillisesti</small></p></article><article class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="2" y="6" width="20" height="11" rx="2"/><circle cx="9" cy="11.5" r="3"/><circle cx="16.5" cy="11.5" r="2"/><path d="M5 17v3M9 17v2"/></svg></div><h3>GPU-vesiblokki</h3><p class="muted">Korvaa näytönohjaimen tehdasjäähdyttimen ja jäähdyttää grafiikkapiiriä, muisteja ja virransyöttöä.</p><p class="price-chip">100–250+ € <small>tyypillisesti</small></p></article><article class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 7v10M10 7v10M14 7v10M18 7v10"/></svg></div><h3>Radiatori</h3><p class="muted">Luovuttaa nesteen lämmön ilmaan tuulettimien avulla.</p><p class="price-chip">50–150 € <small>tyypillisesti</small></p></article><article class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8a4 4 0 0 1 4 4M12 16a4 4 0 0 1-4-4"/><circle cx="12" cy="12" r="1.5"/></svg></div><h3>Pumppu</h3><p class="muted">Pitää nesteen kierrossa tasaisella virtauksella.</p><p class="price-chip">70–150 € <small>tyypillisesti</small></p></article><article class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="3"/><path d="M7 11c2 1 4-1 6 0s3 0 4-.5"/></svg></div><h3>Säiliö</h3><p class="muted">Varastoi nestettä, helpottaa täyttöä ja ilmanpoistoa.</p><p class="price-chip">40–120 € <small>tyypillisesti</small></p></article><article class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="4"/><circle cx="12" cy="12" r="1.6"/><path d="M12 10.4c0-3 1-5 3.5-5M13.6 12c3 0 5 1 5 3.5M12 13.6c0 3-1 5-3.5 5M10.4 12c-3 0-5-1-5-3.5"/></svg></div><h3>Tuulettimet</h3><p class="muted">Puhaltavat ilmaa radiatorin läpi.</p><p class="price-chip">30–150 € <small>tyypillisesti</small></p></article><article class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 20c0-8 4-8 8-8s8 0 8-8"/><path d="M7 20c0-6 3-5.5 5-5.5s8-.5 8-6.5" opacity=".5"/></svg></div><h3>Letkut</h3><p class="muted">Kuljettavat nestettä komponenttien välillä.</p><p class="price-chip">10–40 € <small>tyypillisesti</small></p></article><article class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M8 3h8v4H8zM7 7h10v4H7zM9 11h6v10H9z"/></svg></div><h3>Liittimet</h3><p class="muted">Kiinnittävät letkut blokkeihin, radiatoreihin ja säiliöön.</p><p class="price-chip">30–150+ € <small>tyypillisesti</small></p></article><article class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5s6.5 7 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 9.5 12 2.5 12 2.5z"/></svg></div><h3>Jäähdytysneste</h3><p class="muted">Siirtää lämpöä ja suojaa järjestelmää korroosiolta.</p><p class="price-chip">10–30 € <small>tyypillisesti</small></p></article></div><p class="mt-2"><a class="btn btn-ghost" href="/komponentit">Tutustu komponentteihin tarkemmin →</a></p></div></section><section class="section" id="huolto"><div class="container"><div class="section-head reveal"><span class="eyebrow">Huolto</span><h2>Custom loopin huolto</h2><p class="lead">Avoin vesijäähdytys vaatii säännöllistä, mutta ei raskasta huoltoa.</p></div><div class="grid grid-3">
+<div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5s6.5 7 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 9.5 12 2.5 12 2.5z"/></svg></div><h3>Nesteen vaihto</h3><p class="muted">Valmistajat suosittelevat nesteen vaihtoa tyypillisesti noin 6–24 kuukauden välein nesteestä riippuen. Värilliset ja läpikuultamattomat nesteet vaativat useammin huoltoa.</p></div>
+<div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="2"/><path d="M6 7v10M10 7v10M14 7v10M18 7v10"/></svg></div><h3>Pölyn puhdistus</h3><p class="muted">Radiatorien lamellit keräävät pölyä. Puhdista ne säännöllisesti paineilmalla tai pehmeällä harjalla.</p></div>
+<div class="card reveal"><div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Tarkastukset</h3><p class="muted">Tarkista nesteen määrä, väri ja liitokset silloin tällöin. Sameus tai kasvusto kertoo, että loop kaipaa puhdistusta.</p></div>
+</div></div></section><section class="section section--alt" id="laskuri"><div class="container"><div class="section-head reveal"><span class="eyebrow">Hintalaskuri</span><h2 id="laskuri-otsikko">Paljonko oma vesijäähdytys maksaisi?</h2><p class="lead">Valitse jäähdytystapa ja osat. Laskuri näyttää suuntaa-antavan budjettihaarukan tyypillisten hintaluokkien perusteella.</p></div>
+<div class="calc" data-calc>
+  <div class="calc-panel reveal">
+    <div class="seg" role="group" aria-label="Jäähdytystapa">
+      <button type="button" data-mode="aio" aria-pressed="true">AiO</button>
+      <button type="button" data-mode="custom" aria-pressed="false">Custom loop</button>
+    </div>
+    <div data-panel="aio"><fieldset class="fieldset"><legend>Radiatorin koko</legend><div class="opt-grid"><label class="opt"><input type="radio" name="aio-size" data-set="aio" data-key="120"><span class="opt-body"><span class="opt-name">120 mm</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="radio" name="aio-size" data-set="aio" data-key="240"><span class="opt-body"><span class="opt-name">240 mm</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="radio" name="aio-size" data-set="aio" data-key="280"><span class="opt-body"><span class="opt-name">280 mm</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="radio" name="aio-size" data-set="aio" data-key="360" checked><span class="opt-body"><span class="opt-name">360 mm</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="radio" name="aio-size" data-set="aio" data-key="420"><span class="opt-body"><span class="opt-name">420 mm</span><span class="opt-price"></span></span><span class="check"></span></label></div></fieldset></div>
+    <div data-panel="custom" hidden><fieldset class="fieldset"><legend>Valitse loopin osat</legend><div class="opt-grid"><label class="opt"><input type="checkbox" data-set="custom" data-key="cpu" checked><span class="opt-body"><span class="opt-name">CPU-vesiblokki</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="checkbox" data-set="custom" data-key="gpu"><span class="opt-body"><span class="opt-name">GPU-vesiblokki</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="checkbox" data-set="custom" data-key="pumpres" checked><span class="opt-body"><span class="opt-name">Pumppu/säiliö</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="checkbox" data-set="custom" data-key="rad360" checked><span class="opt-body"><span class="opt-name">Radiatori 360 mm</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="checkbox" data-set="custom" data-key="rad420"><span class="opt-body"><span class="opt-name">Radiatori 420 mm</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="checkbox" data-set="custom" data-key="fans" checked><span class="opt-body"><span class="opt-name">Tuulettimet</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="checkbox" data-set="custom" data-key="tubes" checked><span class="opt-body"><span class="opt-name">Letkut</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="checkbox" data-set="custom" data-key="fittings" checked><span class="opt-body"><span class="opt-name">Liittimet</span><span class="opt-price"></span></span><span class="check"></span></label><label class="opt"><input type="checkbox" data-set="custom" data-key="coolant" checked><span class="opt-body"><span class="opt-name">Neste</span><span class="opt-price"></span></span><span class="check"></span></label></div></fieldset>
+      <p class="small muted">Vinkki: CPU+GPU-loopissa kaksi radiatoria (esim. 360 mm + 420 mm) on tavallinen ratkaisu.</p></div>
+  </div>
+  <aside class="calc-result reveal" aria-live="polite" aria-labelledby="laskuri-otsikko">
+    <div class="label">Arvioitu kokonaisbudjetti</div>
+    <div class="calc-total" data-total>– €</div>
+    <div class="calc-mid" data-mid></div>
+    <ul class="calc-lines" data-lines></ul>
+    <p class="small muted" style="margin:0"><strong style="color:var(--text)">Kyseessä on arvio.</strong> Todellinen hinta riippuu valmistajasta, mallista, jälleenmyyjästä ja tarjouksista. Asennustarvikkeet, lämpötahna ja mahdolliset lisäosat eivät sisälly laskelmaan.</p>
+  </aside>
+</div></div></section><section class="section"><div class="container narrow"><div class="section-head reveal"><span class="eyebrow">UKK</span><h2>Kysymyksiä custom loopista</h2></div><div class="faq"><details><summary>Mitä custom loop tarkoittaa?</summary><div class="answer"><p>Custom loop eli avoin vesijäähdytys rakennetaan erillisistä osista: vesiblokeista, pumpusta, säiliöstä, radiatoreista, letkuista ja liittimistä. Se on muokattava ja voi jäähdyttää sekä CPU:n että GPU:n, mutta vaatii suunnittelua ja huoltoa.</p></div></details><details><summary>Voiko CPU:n ja GPU:n jäähdyttää samalla loopilla?</summary><div class="answer"><p>Voi, ja se on custom loopin tyypillisin käyttötarkoitus. Tällöin radiatoripinta-alaa kannattaa mitoittaa molempien komponenttien yhteenlasketun lämpökuorman mukaan.</p></div></details><details><summary>Mitä custom loop maksaa?</summary><div class="answer"><p>Pelkän prosessorin custom loop maksaa suuntaa-antavasti noin 250–600 €, ja CPU+GPU-loop tyypillisesti noin 400–1 000 € tai enemmän. Hinta riippuu radiatoreista, liittimien määrästä ja siitä, käytetäänkö kovaputkea.</p></div></details><details><summary>Mitä jäähdytysnestettä pitäisi käyttää?</summary><div class="answer"><p>Custom loopissa käytetään yleensä vesijäähdytykseen tarkoitettua valmisnestettä tai tislattua vettä korroosion- ja kasvustonestoaineiden kanssa. Hanavettä ei suositella. AiO:ssa neste on valmiina, eikä sitä vaihdeta.</p></div></details><details><summary>Kannattaako aloittelijan rakentaa custom loop?</summary><div class="answer"><p>Se on mahdollista, jos suunnittelee huolella ja varaa aikaa. Moni aloittaa AiO:lla ja siirtyy custom looppiin myöhemmin. Jos rakennat ensimmäisen loopin, aloita joustavilla letkuilla, lue asennusohjeet ja tee perusteellinen vuototesti.</p></div></details></div></div></section><section class="section"><div class="container"><div class="cta-band reveal">
+  <h2>Suunnittele oma vesijäähdytyksesi</h2><p>Laske suuntaa-antava budjetti AiO- tai custom loop -kokoonpanolle ja tutustu komponentteihin ennen ostopäätöstä.</p>
+  <div class="btn-row"><a class="btn btn-primary" href="/hinnat#laskuri">Avaa hintalaskuri</a><a class="btn btn-ghost" href="/oppaat/vesijaahdytys-aloittelijalle">Lue aloittelijan opas</a></div>
+</div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="logo" href="/"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22c7e8"/><stop offset="1" stop-color="#3b82f6"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="11" fill="#0f141b" stroke="rgba(148,178,210,.25)"/><path d="M20 8s8 8.6 8 14.2A8 8 0 0 1 12 22.2C12 16.6 20 8 20 8z" fill="url(#lg)"/><path d="M16.5 23.5a3.6 3.6 0 0 0 3.5 3.3" stroke="#e8f9ff" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/></svg><span class="logo-text"><span class="logo-name">WATERCOOLING.FI</span></span></a>
+        <p class="muted mt-2">Suomalainen vesijäähdytyksen tietopankki.</p>
+        <p class="small muted">Riippumaton tietosivusto – ei verkkokauppa. Hintatiedot ovat suuntaa-antavia ja voivat muuttua jälleenmyyjien, tarjousten ja saatavuuden mukaan.</p>
+      </div>
+      <nav aria-label="Sivuston osiot"><h2>Sisältö</h2><ul><li><a href="/vesijaahdytys">Vesijäähdytys</a></li><li><a href="/aio">AiO</a></li><li><a href="/custom-loop">Custom Loop</a></li><li><a href="/komponentit">Komponentit</a></li><li><a href="/hinnat">Hinnat</a></li><li><a href="/tuotemerkit">Tuotemerkit</a></li><li><a href="/oppaat">Oppaat</a></li><li><a href="/ukk">UKK</a></li></ul></nav>
+      <nav aria-label="Tietoa sivustosta"><h2>Sivusto</h2><ul>
+        <li><a href="/tietosuoja">Tietosuojakäytäntö</a></li>
+        <li><a href="/evasteet">Evästekäytäntö</a></li>
+        <li><a href="/yhteystiedot">Yhteystiedot</a></li>
+      </ul></nav>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Watercooling.fi</span><span>Sisältö päivitetty 30.9.2026</span></div>
+  </div>
+</footer>
+<script src="/main.js" defer></script>
+</body>
+</html>
